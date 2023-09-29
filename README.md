@@ -49,10 +49,10 @@
 - [Rust-template](#rust-template)
   - [About rust-template](#about-rust-template)
   - [Get started](#get-started)
-    - [Run with docker](#run-with-docker)
+    - [Setup env](#setup-env)
+    - [Run with Cargo make](#run-with-cargo-make)
   - [rust-template API](#rust-template-api)
     - [Check](#check)
-  - [Support the developer](#support-the-developer)
   - [Contributing and issues](#contributing-and-issues)
   - [Changelog](#changelog)
   - [License](#license)
@@ -67,17 +67,22 @@ rust-template is a Rust web service which comes integrated with ClamAV. The serv
 
 ## Get started
 
-### Run with docker
-
-The entire rust-template web service comes with a docker compose file to easily run the service on your machine.
-Just run:
+### Setup env
 
 ```sh
-docker-compose build
-docker-compose up -d
+cp .env.test .env
+vim .env
 ```
 
-At this point rust-template will be served on the specified port in the docker-compose file. (Default: `3010`)
+```env
+WEB_PORT=3001
+```
+
+### Run with Cargo make
+
+```sh
+cargo make -p production run
+```
 
 ## rust-template API
 
@@ -89,24 +94,7 @@ Check web service status:
 GET /check
 ```
 
-Response:
-
-```json
-{
-  "status": "ok"
-}
-```
-
----
-
-## Support the developer
-
-If you like rust-template and you're grateful for the work I've done, please consider a little donation 🥳
-
-You can make a donation with one of these platforms:
-
-[![ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/veeso)
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/chrisintin)
+Response: Empty (200)
 
 ---
 

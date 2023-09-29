@@ -4,8 +4,11 @@ extern crate serde;
 extern crate tracing;
 
 mod config;
+#[cfg(test)]
+mod test;
 mod web;
 
+const APP_NAME: &str = env!("CARGO_PKG_NAME");
 const APP_AUTHORS: &str = env!("CARGO_PKG_AUTHORS");
 const APP_VERSION: &str = env!("CARGO_PKG_VERSION");
 
@@ -13,12 +16,10 @@ const APP_VERSION: &str = env!("CARGO_PKG_VERSION");
 #[actix_web::main]
 async fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt::init();
-    info!("rust-template v{} - developed by {}", APP_VERSION, APP_AUTHORS);
+    info!("{APP_NAME} v{APP_VERSION} - developed by {APP_AUTHORS}");
     let config = config::Config::try_from_env()?;
     info!("initializing web service...");
     let web_service = web::WebServer::init(
-        &config.clamav_address,
-        config.max_upload_size,
         config.web_port,
     )
     .await?;
@@ -33,7 +34,7 @@ async fn main() -> anyhow::Result<()> {
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt::init();
-    info!("rust-template v{} - developed by {}", APP_VERSION, APP_AUTHORS);
+    info!("{APP_NAME} v{APP_VERSION} - developed by {APP_AUTHORS}");
     let config = config::Config::try_from_env()?;
 
     Ok(())
@@ -41,5 +42,7 @@ async fn main() -> anyhow::Result<()> {
 */
 
 fn main() -> anyhow::Result<()> {
+    info!("{APP_NAME} v{APP_VERSION} - developed by {APP_AUTHORS}");
+    let config = config::Config::try_from_env()?;
     Ok(())
 }
