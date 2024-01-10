@@ -1,48 +1,10 @@
 # Rust-template
 
-<p align="center">~  ~</p>
-<p align="center">
-  <a href="#get-started-">Get started</a>
-  ·
-  <a href="https://crates.io/crates/rust-template" target="_blank">Crates.io</a>
-</p>
-<p align="center">Developed by <a href="https://veeso.dev/" target="_blank">@veeso</a></p>
-<p align="center">Current version: 0.1.0 (26/06/2023)</p>
-
-<p align="center">
-  <a href="https://opensource.org/license/mit/"
-    ><img
-      src="https://img.shields.io/badge/License-MIT-teal.svg"
-      alt="License-MIT"
-  /></a>
-  <a href="https://github.com/veeso-dev/rust-template/stargazers"
-    ><img
-      src="https://img.shields.io/github/stars/veeso-dev/rust-template.svg"
-      alt="Repo stars"
-  /></a>
-  <a href="https://crates.io/crates/rust-template"
-    ><img
-      src="https://img.shields.io/crates/d/rust-template.svg"
-      alt="Downloads counter"
-  /></a>
-  <a href="https://crates.io/crates/rust-template"
-    ><img
-      src="https://img.shields.io/crates/v/rust-template.svg"
-      alt="Latest version"
-  /></a>
-  <a href="https://ko-fi.com/veeso">
-    <img
-      src="https://img.shields.io/badge/donate-ko--fi-red"
-      alt="Ko-fi"
-  /></a>
-</p>
-<p align="center">
-  <a href="https://github.com/veeso-dev/rust-template/actions"
-    ><img
-      src="https://github.com/veeso-dev/rust-template/workflows/build-test/badge.svg"
-      alt="Linux CI"
-  /></a>
-</p>
+[![license-mit](https://img.shields.io/badge/License-MIT-teal.svg)](https://opensource.org/license/mit/)
+[![build-test](https://github.com/veeso-dev/rust-template/actions/workflows/build-test.yml/badge.svg)](https://github.com/veeso-dev/rust-template/actions/workflows/build-test.yml)
+[![downloads](https://img.shields.io/crates/d/rust-template.svg)](https://crates.io/crates/rust-template)
+[![latest version](https://img.shields.io/crates/v/rust-template.svg)](https://crates.io/crates/rust-template)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 ---
 
