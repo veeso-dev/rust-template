@@ -18,7 +18,12 @@ dependencies = []
 [tasks.lint]
 description = "Run lint"
 command = "cargo"
-args = ["clippy"]
+args = ["clippy", "--", "-Dwarnings"]
+
+[tasks.check-format]
+description = "Run the cargo rustfmt plugin."
+command = "cargo"
+args = ["fmt", "--all", "--", "--check"]
 
 [tasks.format]
 description = "Run the cargo rustfmt plugin."
