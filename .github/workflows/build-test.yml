@@ -38,6 +38,6 @@ jobs:
       - name: Test
         run: cargo make test --profile development
       - name: Format
-        run: cargo fmt --all -- --check
+        run: cargo make check-format
       - name: Clippy
-        run: cargo clippy -- -Dwarnings
+        run: cargo make lint
